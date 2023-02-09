@@ -1,0 +1,9 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.copyright__info,
+.copyright__link {
+  @include mixins.font-regular;
+  @include mixins.font-subtitle;
+  color: variables.$base-grey;
+}

@@ -1,0 +1,92 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.footer__social-list-wrapper {
+  position: relative;
+  padding: 20px 0 21px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: variables.$base-secondary;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  flex-shrink: 0;
+  padding: 12px 20px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer__logo-image {
+  display: block;
+}
+
+.footer__logo-description {
+  display: none;
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer__location,
+.footer__phone {
+  @include mixins.font-regular;
+  @include mixins.font-body;
+  color: variables.$base-black;
+}
+
+
+.footer__navigation-heading {
+  @include mixins.font-bold;
+  @include mixins.font-body;
+  color: variables.$violet-primary;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .footer__social-list-wrapper {
+    padding-bottom: 30px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .footer__logo-image {
+    width: 170px;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .footer__logo-container {
+    display: flex;
+  }
+
+  .footer__social-list-wrapper {
+    padding-bottom: 20px;
+  }
+
+  .footer__logo-image {
+    margin-bottom: 10px;
+  }
+
+  .footer__logo-description {
+    display: block;
+    width: 318px;
+  }
+}

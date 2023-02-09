@@ -1,0 +1,52 @@
+//Font weight
+@mixin font-regular {
+  font-weight: 400;
+}
+
+@mixin font-medium {
+  font-weight: 500;
+}
+
+@mixin font-semibold {
+  font-weight: 600;
+}
+
+@mixin font-bold {
+  font-weight: 700;
+}
+
+//Font body
+@mixin font-subtitle {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin font-body {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin font-title {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin font-subheading {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@mixin font-heading-3 {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+@mixin font-heading-2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@mixin font-heading-1 {
+  font-size: 36px;
+  line-height: 48px;
+}

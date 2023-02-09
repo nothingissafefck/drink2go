@@ -1,0 +1,60 @@
+@use "../global/variables";
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-list__content {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin-right: 20px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.social-list__icon svg {
+  fill: variables.$base-grey;
+}
+
+.social-list__link {
+  position: relative;
+  display: block;
+  padding: 10px;
+  color: variables.$base-grey;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: variables.$violet-primary;
+    background-color: variables.$base-secondary;
+  }
+
+  &:active {
+    background-color: variables.$primary-opacity;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .social-list {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 318px;
+  }
+
+  .social-list__content {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.subheading {
+  display: block;
+  @include mixins.font-bold;
+  @include mixins.font-subtitle;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: variables.$violet-primary;
+}

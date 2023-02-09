@@ -1,0 +1,22 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.catalog__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.catalog__heading {
+  @include mixins.font-bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: variables.$base-black;
+}
+
+.catalog__cart-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

@@ -1,1 +1,41 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее*/
+@use "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  vertical-align: top;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.page-link {
+  color: variables.$base-black;
+  text-decoration: none;
+}

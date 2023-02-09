@@ -1,0 +1,8 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.logo-description {
+  @include mixins.font-regular;
+  @include mixins.font-body;
+  color: variables.$base-black;
+}

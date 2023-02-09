@@ -1,0 +1,17 @@
+@use "../global/variables";
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: variables.$min-tablet-width) {
+    min-width: variables.$min-tablet-width;
+  }
+
+  @media (min-width: variables.$min-desktop-width) {
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: variables.$min-desktop-width;
+  }
+}

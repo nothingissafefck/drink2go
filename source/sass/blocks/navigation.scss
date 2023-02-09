@@ -1,0 +1,29 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.navigation {
+  display: flex;
+}
+
+.navigation__actions {
+  display: flex;
+}
+
+.navigation__action-link {
+  display: inline-block;
+  padding: 20px 22px;
+}
+
+.navigation__action-icon {
+  vertical-align: top;
+}
+
+.navigation__link {
+  @include mixins.font-semibold;
+  @include mixins.font-subtitle;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: variables.$base-black;
+}
+
+

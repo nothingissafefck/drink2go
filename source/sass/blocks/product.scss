@@ -1,0 +1,40 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.product {
+
+  &--flat-white {
+    background-color: variables.$flat-white;
+  }
+
+  &--lavender-latte {
+    background-color: variables.$lavender-latte;
+  }
+
+  &--espresso {
+    background-color: variables.$espresso;
+  }
+}
+
+.product__heading {
+  @include mixins.font-bold;
+  @include mixins.font-heading-1;
+}
+
+.product__description {
+  @include mixins.font-regular;
+  @include mixins.font-body;
+}
+
+.product__cost {
+  @include mixins.font-semibold;
+  @include mixins.font-subheading;
+
+  &--old {
+    @include mixins.font-regular;
+    font-size: 16px;
+    line-height: 32px;
+    color: variables.$violet-primary;
+    text-decoration: line-through;
+  }
+}

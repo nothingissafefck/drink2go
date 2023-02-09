@@ -1,0 +1,61 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.button {
+  display: block;
+  padding: 8px 20px;
+  font-family: variables.$montserrat;
+  color: variables.$base-white;
+  background-color: variables.$violet-primary;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$violet-lighter;
+  }
+
+  &:active {
+    background-color: variables.$violet-darker;
+  }
+
+  &:disabled {
+    background-color: variables.$base-grey;
+  }
+
+  &--submit {
+    font-size: 13px;
+    line-height: 24px;
+    padding: 10px;
+  }
+
+  &--reset {
+    font-size: 14px;
+    line-height: 24px;
+    color: variables.$violet-primary;
+    background-color: variables.$base-white;
+  }
+
+  &--cart {
+    position: relative;
+    padding: 8px 20px 8px 46px;
+    @include mixins.font-body;
+  }
+
+  &--cart::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 16px;
+    background-image: url("../../img/add-basket.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

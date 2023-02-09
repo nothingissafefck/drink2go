@@ -1,0 +1,33 @@
+@use "../global/variables";
+
+.map__canvas {
+  width: 100%;
+  height: 420px;
+}
+
+.map__image-map {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .map__canvas {
+    height: 480px;
+  }
+
+  .map__image-map {
+    height: 480px;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .map__canvas {
+    height: 540px;
+  }
+
+  .map__image-map {
+    height: 540px;
+  }
+}

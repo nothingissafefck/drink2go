@@ -1,0 +1,15 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.sorting__title {
+  @include mixins.font-semibold;
+  @include mixins.font-title;
+  color: variables.$base-black;
+}
+
+.sorting__select {
+  @include mixins.font-semibold;
+  @include mixins.font-title;
+  text-transform: lowercase;
+  color: variables.$violet-primary;
+}

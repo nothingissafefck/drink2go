@@ -1,1 +1,63 @@
+@use "../global/variables";
 
+.header {
+  background-color: variables.$base-white;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20px;
+}
+
+.header__logo {
+  display: flex;
+  padding: 12px 20px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header__logo-image {
+  display: block;
+}
+
+.header__navigation-links {
+  display: none;
+}
+
+.header__navigation-link {
+  display: none;
+}
+
+.header__logo-description {
+  display: none;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .header__logo-image {
+    width: 170px;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .header__logo-container {
+    display: flex;
+  }
+
+  .header__logo-image {
+    margin-bottom: 10px;
+  }
+
+  .header__logo-description {
+    display: block;
+    width: 318px;
+  }
+
+}
