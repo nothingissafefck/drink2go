@@ -1,9 +1,18 @@
 @use "../global/variables";
 @use "../global/mixins";
 
+.footer {
+  background-color: variables.$base-white;
+}
+
 .footer__social-list-wrapper {
+  padding: 10px 0 11px;
+}
+
+.footer__social-list-wrapper,
+.footer__navigation,
+.footer__address-wrapper {
   position: relative;
-  padding: 20px 0 21px;
 
   &::after {
     content: "";
@@ -20,7 +29,7 @@
 .footer__logo {
   display: flex;
   flex-shrink: 0;
-  padding: 12px 20px;
+  padding: 12px 0;
 
   &:hover,
   &:focus {
@@ -40,19 +49,72 @@
   display: none;
 }
 
+.footer__address-wrapper {
+  padding: 20px 0;
+}
+
 .footer__address {
+  display: flex;
+  flex-direction: column;
   font-style: normal;
 }
 
 .footer__location,
 .footer__phone {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.footer__location {
+  margin-bottom: 16px;
+
+  &::before {
+    background-image: url("../../img/pin.svg");
+  }
+}
+
+.footer__phone::before {
+  background-image: url("../../img/phone.svg");
+}
+
+.footer__location,
+.footer__phone {
+  padding-left: 19px;
   @include mixins.font-regular;
   @include mixins.font-body;
   color: variables.$base-black;
 }
 
+.footer__navigation {
+  flex-direction: column;
+  padding: 20px 0 17px;
+}
+
+.footer__navigation-link {
+  display: block;
+  padding: 8px 0;
+}
 
 .footer__navigation-heading {
+  margin: 0 0 12px;
+  @include mixins.font-bold;
+  @include mixins.font-body;
+  color: variables.$violet-primary;
+}
+
+.footer__address-heading {
+  margin: 0 0 20px;
   @include mixins.font-bold;
   @include mixins.font-body;
   color: variables.$violet-primary;

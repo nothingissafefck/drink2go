@@ -1,24 +1,35 @@
 @use "../global/variables";
 @use "../global/mixins";
 
+.advantages {
+  background-color: variables.$base-white;
+}
+
 .advantages__container {
   padding-top: 50px;
   padding-bottom: 60px;
   text-align: center;
 }
 
+.advantages__heading {
+  margin: 0 0 36px;
+  @include mixins.font-heading-2;
+}
+
 .advantages__subheading {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .advantages__title {
-  margin-bottom: 36px;
+  display: block;
+  margin-bottom: 4px;
   @include mixins.font-bold;
   @include mixins.font-heading-3;
   color: variables.$base-black;
 }
 
 .advantages__description {
+  margin: 0;
   @include mixins.font-regular;
   @include mixins.font-body;
 }
@@ -26,7 +37,7 @@
 .advantages__item {
   position: relative;
   margin-bottom: 32px;
-  padding-top: 66px;
+  padding-top: 65px;
 
   &:last-child {
     margin-bottom: 0;

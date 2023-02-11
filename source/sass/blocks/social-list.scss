@@ -23,26 +23,14 @@
   }
 }
 
-.social-list__icon svg {
-  fill: variables.$base-grey;
-}
-
 .social-list__link {
   position: relative;
   display: block;
-  padding: 10px;
-  color: variables.$base-grey;
   border-radius: 4px;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    color: variables.$violet-primary;
-    background-color: variables.$base-secondary;
-  }
-
-  &:active {
-    background-color: variables.$primary-opacity;
+  svg {
+    fill: variables.$base-grey;
   }
 }
 
@@ -56,5 +44,30 @@
 
   .social-list__content {
     margin-left: 0;
+  }
+
+  .social-list__link {
+    padding: 10px;
+
+    svg {
+      vertical-align: top;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: variables.$base-secondary;
+
+      svg {
+        fill: variables.$violet-primary;
+      }
+    }
+
+    &:active {
+      background-color: variables.$primary-opacity;
+
+      svg {
+        fill: variables.$violet-primary;
+      }
+    }
   }
 }

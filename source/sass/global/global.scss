@@ -9,7 +9,8 @@
 html,
 body {
   margin: 0;
-  font-family: "Montserrat", "Arial", sans-serif;;
+  font-family: "Montserrat", "Arial", sans-serif;
+  background-color: variables.$lightest-grey;
 }
 
 img {
@@ -39,3 +40,9 @@ img {
   color: variables.$base-black;
   text-decoration: none;
 }
+
+//@media (min-width: variables.$min-tablet-width) {
+//  .visible-mobile {
+//    display: none;
+//  }
+//}

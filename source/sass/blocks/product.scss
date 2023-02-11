@@ -1,6 +1,15 @@
 @use "../global/variables";
 @use "../global/mixins";
 
+.product__container {
+  padding: 20px 20px 60px;
+}
+
+.product__image-container {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .product {
 
   &--flat-white {
@@ -16,19 +25,40 @@
   }
 }
 
+.product__subheading {
+  margin-bottom: 5px;
+}
+
 .product__heading {
+  margin: 0 0 10px;
+  letter-spacing: 0.02em;
   @include mixins.font-bold;
   @include mixins.font-heading-1;
 }
 
 .product__description {
+  margin: 0 0 20px;
   @include mixins.font-regular;
   @include mixins.font-body;
+}
+
+.product__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__button {
+  margin-left: 20px;
 }
 
 .product__cost {
   @include mixins.font-semibold;
   @include mixins.font-subheading;
+
+  &:not(&--old) {
+    margin-left: 6px;
+  }
 
   &--old {
     @include mixins.font-regular;

@@ -1,6 +1,11 @@
 @use "../global/variables";
 @use "../global/mixins";
 
+.sorting {
+  display: flex;
+  justify-content: space-between;
+}
+
 .sorting__title {
   @include mixins.font-semibold;
   @include mixins.font-title;

@@ -17,6 +17,29 @@
   text-align: center;
 }
 
-.catalog-item__description {
-  @include mixins.font-regular;
+.catalog-item__image {
+  display: block;
+  margin-bottom: 24px;
 }
+
+.catalog-item__title {
+  margin: 0 0 5px;
+}
+
+.catalog-item__description {
+  margin: 0 0 16px;
+  @include mixins.font-regular;
+  @include mixins.font-body;
+}
+
+.catalog-item__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catalog-item__cost {
+  @include mixins.font-semibold;
+  @include mixins.font-subheading;
+}
+

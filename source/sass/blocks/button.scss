@@ -3,8 +3,10 @@
 
 .button {
   display: block;
+  white-space: nowrap;
   padding: 8px 20px;
   font-family: variables.$montserrat;
+  @include mixins.font-title;
   color: variables.$base-white;
   background-color: variables.$violet-primary;
   text-align: center;
@@ -27,12 +29,13 @@
   }
 
   &--submit {
+    padding: 10px 14px;
     font-size: 13px;
     line-height: 24px;
-    padding: 10px;
   }
 
   &--reset {
+    padding: 10px 16px;
     font-size: 14px;
     line-height: 24px;
     color: variables.$violet-primary;

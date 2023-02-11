@@ -1,9 +1,22 @@
 @use "../global/variables";
 @use "../global/mixins";
 
+.copyright {
+  padding: 20px 0 30px;
+  text-align: center;
+}
+
 .copyright__info,
 .copyright__link {
   @include mixins.font-regular;
   @include mixins.font-subtitle;
   color: variables.$base-grey;
+}
+
+.copyright__info {
+  margin: 0;
+}
+
+.copyright__link svg {
+  vertical-align: top;
 }

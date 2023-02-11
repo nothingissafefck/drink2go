@@ -18,12 +18,14 @@
   vertical-align: top;
 }
 
+.navigation__link-item {
+  margin-bottom: 4px;
+}
+
 .navigation__link {
-  @include mixins.font-semibold;
+  @include mixins.font-medium;
   @include mixins.font-subtitle;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   color: variables.$base-black;
 }
-
-
