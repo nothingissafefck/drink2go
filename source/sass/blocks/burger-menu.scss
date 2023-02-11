@@ -64,3 +64,9 @@
     transition: 0.2s all;
   }
 }
+
+@media (min-width: variables.$min-tablet-width) {
+  .burger-menu {
+    display: none;
+  }
+}

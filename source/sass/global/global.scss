@@ -41,8 +41,22 @@ img {
   text-decoration: none;
 }
 
-//@media (min-width: variables.$min-tablet-width) {
-//  .visible-mobile {
-//    display: none;
-//  }
-//}
+.visible-desktop {
+  display: none;
+}
+
+.visible-tablet {
+  display: none;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .visible-tablet {
+    display: initial;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .visible-desktop {
+    display: initial;
+  }
+}

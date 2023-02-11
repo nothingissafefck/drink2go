@@ -17,6 +17,29 @@
   margin: 0;
 }
 
-.copyright__link svg {
-  vertical-align: top;
+.copyright__link {
+  padding-left: 4px;
+
+  svg {
+    vertical-align: top;
+    color: variables.$base-grey;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .copyright__link {
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:hover svg,
+    &:focus svg {
+      color: variables.$violet-primary;
+    }
+
+    &:active,
+    &:active svg {
+      color: variables.$violet-darker;
+    }
+  }
 }

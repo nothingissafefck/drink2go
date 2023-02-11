@@ -1,8 +1,80 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.slider {
+  position: relative;
+}
+
 .slider__item {
   text-align: center;
 }
 
 .slider__pagination-button {
   position: absolute;
-  top: 10px;
+  top: 0;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--prev {
+    left: 0;
+
+    svg {
+      color: variables.$violet-primary;
+    }
+  }
+
+  &--next {
+    right: 0;
+
+    svg {
+      color: variables.$violet-primary;
+    }
+  }
+}
+
+@media (min-width: variables.$min-tablet-width) {
+
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .slider__pagination-button {
+
+    &--prev {
+      background-color: transparent;
+      padding: 0 35px 0;
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(to right, variables.$base-white, rgba(255, 255, 255, 0));
+      }
+
+      &:active {
+        background: linear-gradient(to right, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+      }
+
+      &:disabled {
+        color: variables.$base-grey;
+      }
+    }
+
+    &--next {
+      background-color: transparent;
+      padding: 0 35px 0;
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(to left, variables.$base-white, rgba(255, 255, 255, 0));
+      }
+
+      &:active {
+        background: linear-gradient(to left, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+      }
+
+      &:disabled {
+        color: variables.$base-grey;
+      }
+    }
+  }
 }

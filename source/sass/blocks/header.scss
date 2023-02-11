@@ -13,27 +13,10 @@
 .header__logo {
   display: flex;
   padding: 12px 20px;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 .header__logo-image {
   display: block;
-}
-
-.header__navigation-links {
-  display: none;
-}
-
-.header__navigation-link {
-  display: none;
 }
 
 .header__logo-description {
@@ -60,4 +43,11 @@
     width: 318px;
   }
 
+  .header__navigation-links {
+    display: flex;
+  }
+
+  .header__navigation-link {
+    display: block;
+  }
 }

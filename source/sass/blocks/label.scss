@@ -1,0 +1,81 @@
+@use "../global/variables";
+
+.label {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+
+  &--radio {
+    padding-left: 34px;
+    padding-bottom: 23px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("../../img/radio-unchecked.svg");
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        background-image: url("../../img/radio-hover.svg");
+      }
+    }
+
+    &:active {
+      &:before {
+        background-image: url("../../img/radio-checked.svg");
+      }
+    }
+
+    &:disabled {
+      &:before {
+        background-image: url("../../img/radio-disabled-checked.svg");
+      }
+    }
+  }
+
+  &--checkbox {
+    padding-left: 52px;
+    padding-bottom: 22px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 42px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("../../img/checkbox-unchecked.svg");
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        background-image: url("../../img/checkbox-hover.svg");
+      }
+    }
+
+    &:active {
+      &:before {
+        background-image: url("../../img/checkbox-checked.svg");
+      }
+    }
+
+    &:disabled {
+      &:before {
+        background-image: url("../../img/checkbox-disabled-checked.svg");
+      }
+    }
+  }
+}

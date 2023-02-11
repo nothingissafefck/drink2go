@@ -24,13 +24,12 @@
 }
 
 .social-list__link {
-  position: relative;
   display: block;
   border-radius: 4px;
-  cursor: pointer;
 
   svg {
-    fill: variables.$base-grey;
+    vertical-align: top;
+    color: variables.$base-grey;
   }
 }
 
@@ -39,7 +38,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    min-width: 318px;
   }
 
   .social-list__content {
@@ -48,17 +46,14 @@
 
   .social-list__link {
     padding: 10px;
-
-    svg {
-      vertical-align: top;
-    }
+    cursor: pointer;
 
     &:hover,
     &:focus {
       background-color: variables.$base-secondary;
 
       svg {
-        fill: variables.$violet-primary;
+        color: variables.$violet-primary;
       }
     }
 
@@ -66,7 +61,7 @@
       background-color: variables.$primary-opacity;
 
       svg {
-        fill: variables.$violet-primary;
+        color: variables.$violet-primary;
       }
     }
   }

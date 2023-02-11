@@ -30,15 +30,6 @@
   display: flex;
   flex-shrink: 0;
   padding: 12px 0;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 .footer__logo-image {
@@ -121,6 +112,14 @@
 }
 
 @media (min-width: variables.$min-tablet-width) {
+  .footer__social-list-wrapper,
+  .footer__navigation,
+  .footer__address-wrapper {
+    &::after {
+      display: none;
+    }
+  }
+
   .footer__social-list-wrapper {
     padding-bottom: 30px;
 

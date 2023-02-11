@@ -29,3 +29,16 @@
   letter-spacing: 0.02em;
   color: variables.$base-black;
 }
+
+@media (min-width: variables.$min-desktop-width) {
+  .navigation__link {
+    &:hover,
+    &:focus {
+      color: variables.$violet-lighter;
+    }
+
+    &:active {
+      color: variables.$violet-darker;
+    }
+  }
+}
