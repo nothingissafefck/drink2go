@@ -13,6 +13,7 @@
 .map__canvas {
   width: 100%;
   height: 420px;
+  background-color: variables.$backround-map;
 
   &--image {
     display: none;

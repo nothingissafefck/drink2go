@@ -56,6 +56,10 @@
 }
 
 @media (min-width: variables.$min-tablet-width) {
+  .price__input-container {
+    padding-left: 10px;
+  }
+
   .price__divider {
     width: 9px;
   }
@@ -79,6 +83,8 @@
   .price__input-container {
     max-width: none;
     margin-bottom: 0;
+    padding-left: 0;
+
   }
 
   .price__slider-toggle {
