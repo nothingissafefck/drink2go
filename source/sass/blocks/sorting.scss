@@ -35,3 +35,15 @@
     margin-left: 26px;
   }
 }
+
+@media (min-width: variables.$min-tablet-width) {
+  .sorting__select {
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: variables.$base-secondary;
+    }
+  }
+}
