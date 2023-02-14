@@ -54,6 +54,7 @@
   .slider__pagination-button {
 
     &--prev {
+      top: 0;
       background-color: transparent;
       padding: 0 35px 0;
 
@@ -72,6 +73,7 @@
     }
 
     &--next {
+      top: 0;
       background-color: transparent;
       padding: 0 35px 0;
 

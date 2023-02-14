@@ -71,7 +71,7 @@
   }
 
   .price__slider-range {
-    width: 75%;
+    width: 80%;
   }
 }
 
@@ -79,5 +79,19 @@
   .price__input-container {
     max-width: none;
     margin-bottom: 0;
+  }
+
+  .price__slider-toggle {
+    &--min {
+      left: 1%;
+    }
+
+    &--max {
+      left: 86%;
+    }
+  }
+
+  .price__slider-range {
+    width: 86%;
   }
 }
