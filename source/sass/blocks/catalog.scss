@@ -2,30 +2,46 @@
 @use "../global/mixins";
 
 .catalog__container {
-  padding-top: 50px;
-  padding-bottom: 60px;
+  margin-bottom: 44px;
+  padding-top: 49px;
   text-align: center;
+}
+
+.catalog__form {
+  margin-bottom: 41px;
 }
 
 .catalog__list {
   display: flex;
   flex-direction: column;
+  text-align: left;
   gap: 20px;
   margin-bottom: 40px;
 }
 
+.catalog__countries {
+  margin-bottom: 35px;
+}
+
 .catalog__heading {
+  margin: 0 0 20px;
   @include mixins.font-bold;
-  font-size: 24px;
-  line-height: 36px;
+  @include mixins.font-heading-2;
   color: variables.$base-black;
+}
+
+.catalog__subheading {
+  margin-bottom: 5px;
 }
 
 .catalog__button {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 24px;
+
+  &--submit {
+    margin-bottom: 25px;
+  }
 }
 
 .catalog__cart-wrapper {
@@ -34,3 +50,118 @@
   align-items: center;
 }
 
+@media (min-width: variables.$min-tablet-width) {
+  .catalog__container {
+    margin-bottom: 90px;
+  }
+
+  .catalog__heading {
+    @include mixins.font-heading-3;
+  }
+
+  .catalog__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 42px;
+    text-align: left;
+    margin-bottom: 44px;
+  }
+
+  .catalog__price {
+    padding-right: 14px;
+  }
+
+  .catalog__milk {
+    padding-left: 6px;
+  }
+
+  .catalog__countries {
+    margin-bottom: 0;
+    padding-left: 12px;
+  }
+
+  .catalog__button {
+    margin: 0;
+
+    &--submit {
+      padding: 8px 3px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &--reset {
+      padding: 8px 6px;
+    }
+  }
+
+  .catalog__button-container {
+    display: flex;
+    grid-column: 1 / 4;
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 53px;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 70px;
+    text-align: left;
+    align-items: center;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .catalog__container {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    margin-bottom: 118px;
+    padding-top: 100px;
+  }
+
+  .catalog__subheading,
+  .catalog__heading {
+    grid-column: 1 / 3;
+  }
+
+  .catalog__heading {
+    margin-bottom: 40px;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60px;
+  }
+
+  .catalog__form {
+    display: flex;
+    flex-direction: column;
+    grid-row: 3 / 6;
+    row-gap: 0;
+  }
+
+  .catalog__price {
+    margin-bottom: 28px;
+    padding-right: 0;
+  }
+
+  .catalog__milk {
+    margin-bottom: 7px;
+    padding-left: 0;
+  }
+
+  .catalog__countries {
+    margin-bottom: 40px;
+    padding-left: 0;
+  }
+
+  .catalog__button-container {
+    padding-right: 0;
+  }
+
+  .catalog__list {
+    margin-left: 30px;
+  }
+}

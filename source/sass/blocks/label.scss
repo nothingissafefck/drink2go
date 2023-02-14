@@ -1,16 +1,17 @@
 @use "../global/variables";
+@use "../global/mixins";
 
 .label {
   position: relative;
   display: inline-flex;
+  @include mixins.font-title;
   cursor: pointer;
 
   &--radio {
+    margin-bottom: 22px;
     padding-left: 34px;
-    padding-bottom: 23px;
 
-    &:before {
-      content: "";
+    .label__icon {
       position: absolute;
       top: 0;
       left: 0;
@@ -22,32 +23,41 @@
       background-image: url("../../img/radio-unchecked.svg");
     }
 
+    .input:disabled ~ .label__text {
+      color: variables.$base-grey;
+    }
+
+    .input:checked + .label__icon {
+      background-image: url("../../img/radio-checked.svg");
+    }
+
+    .input:disabled + .label__icon {
+      background-image: url("../../img/radio-disabled-checked.svg");
+    }
+
+    .input:disabled:not(:checked) + .label__icon {
+      background-image: url("../../img/radio-disabled-unchecked.svg");
+    }
+
     &:hover,
     &:focus {
-      &:before {
+      .label__icon {
         background-image: url("../../img/radio-hover.svg");
       }
     }
 
     &:active {
-      &:before {
+      .label__icon {
         background-image: url("../../img/radio-checked.svg");
-      }
-    }
-
-    &:disabled {
-      &:before {
-        background-image: url("../../img/radio-disabled-checked.svg");
       }
     }
   }
 
   &--checkbox {
     padding-left: 52px;
-    padding-bottom: 22px;
+    margin-bottom: 20px;
 
-    &:before {
-      content: "";
+    .label__icon {
       position: absolute;
       top: 0;
       left: 0;
@@ -59,23 +69,45 @@
       background-image: url("../../img/checkbox-unchecked.svg");
     }
 
+    .input:disabled ~ .label__text {
+      color: variables.$base-grey;
+    }
+
+    .input:checked + .label__icon {
+      background-image: url("../../img/checkbox-checked.svg");
+    }
+
+    .input:disabled:checked + .label__icon {
+      background-image: url("../../img/checkbox-disabled-checked.svg");
+    }
+
+    .input:disabled:not(:checked) + .label__icon {
+      background-image: url("../../img/checkbox-disabled-unchecked.svg");
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
     &:hover,
     &:focus {
-      &:before {
+      .label__icon {
         background-image: url("../../img/checkbox-hover.svg");
       }
     }
 
     &:active {
-      &:before {
+      .label__icon {
         background-image: url("../../img/checkbox-checked.svg");
       }
     }
+  }
+}
 
-    &:disabled {
-      &:before {
-        background-image: url("../../img/checkbox-disabled-checked.svg");
-      }
+@media (min-width: variables.$min-tablet-width) {
+  .label {
+    &--radio {
+      margin-bottom: 21px;
     }
   }
 }

@@ -6,6 +6,7 @@
 }
 
 .slider__item {
+  height: auto;
   text-align: center;
 }
 
@@ -18,7 +19,7 @@
   cursor: pointer;
 
   &--prev {
-    left: 0;
+    left: -4px;
 
     svg {
       color: variables.$violet-primary;
@@ -26,7 +27,7 @@
   }
 
   &--next {
-    right: 0;
+    right: -4px;
 
     svg {
       color: variables.$violet-primary;
@@ -35,7 +36,18 @@
 }
 
 @media (min-width: variables.$min-tablet-width) {
+  .slider__pagination-button {
+    top: -93px;
+    width: 80px;
 
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
 }
 
 @media (min-width: variables.$min-desktop-width) {

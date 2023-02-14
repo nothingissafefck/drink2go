@@ -26,6 +26,12 @@
   }
 }
 
+@media (min-width: variables.$min-tablet-width) {
+  .copyright {
+    padding-top: 8px;
+  }
+}
+
 @media (min-width: variables.$min-desktop-width) {
   .copyright__link {
     cursor: pointer;

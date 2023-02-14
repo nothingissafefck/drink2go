@@ -5,21 +5,20 @@
   display: flex;
 }
 
+.navigation__link-item {
+  margin-bottom: 4px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 .navigation__actions {
   display: flex;
 }
 
-.navigation__action-link {
-  display: inline-block;
-  padding: 20px 22px;
-}
-
 .navigation__action-icon {
   vertical-align: top;
-}
-
-.navigation__link-item {
-  margin-bottom: 4px;
 }
 
 .navigation__link {
@@ -28,6 +27,12 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   color: variables.$base-black;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .navigation__actions {
+    align-items: center;
+  }
 }
 
 @media (min-width: variables.$min-desktop-width) {
@@ -39,6 +44,7 @@
 
     &:active {
       color: variables.$violet-darker;
+      background-color: variables.$base-secondary;
     }
   }
 }

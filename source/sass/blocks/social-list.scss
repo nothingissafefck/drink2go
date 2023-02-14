@@ -25,6 +25,7 @@
 
 .social-list__link {
   display: block;
+  padding: 10px;
   border-radius: 4px;
 
   svg {
@@ -45,7 +46,6 @@
   }
 
   .social-list__link {
-    padding: 10px;
     cursor: pointer;
 
     &:hover,

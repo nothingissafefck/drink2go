@@ -4,8 +4,8 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  align-items: start;
   margin: 0;
+  padding: 0;
   border: none;
 }
 
@@ -13,4 +13,10 @@
   padding: 0 0 22px;
   @include mixins.font-semibold;
   @include mixins.font-title;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .form-group__title {
+    padding: 0 0 19px;
+  }
 }

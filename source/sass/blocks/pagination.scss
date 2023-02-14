@@ -16,9 +16,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
   padding: 8px;
+  min-width: 40px;
+  height: 40px;
   @include mixins.font-regular;
   @include mixins.font-title;
   background-color: variables.$base-white;
@@ -79,7 +79,21 @@
 }
 
 @media (min-width: variables.$min-tablet-width) {
+  .pagination {
+    justify-content: flex-end;
+  }
+
   .pagination__arrow {
     display: none;
+  }
+
+  .pagination__link {
+    &--prev,
+    &--next {
+      padding: 8px 20px;
+      @include mixins.font-regular;
+      @include mixins.font-title;
+      color: variables.$violet-primary;
+    }
   }
 }

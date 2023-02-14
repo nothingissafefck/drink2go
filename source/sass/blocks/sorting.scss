@@ -4,6 +4,8 @@
 .sorting {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
 }
 
 .sorting__title {
@@ -12,9 +14,24 @@
   color: variables.$base-black;
 }
 
+
 .sorting__select {
   @include mixins.font-semibold;
   @include mixins.font-title;
   text-transform: lowercase;
+  background-color: variables.$lightest-grey;
   color: variables.$violet-primary;
+  appearance: none;
+  border: none;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .sorting {
+    justify-content: flex-end;
+    margin-bottom: 28px;
+  }
+
+  .sorting__select-container {
+    margin-left: 26px;
+  }
 }

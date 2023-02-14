@@ -1,4 +1,41 @@
+@use "../global/variables";
+@use "../global/mixins";
+
 .input {
-  display: none;
+  &--radio,
+  &--checkbox {
+    display: none;
+  }
+
+  &--price {
+    margin: 0;
+    padding: 7px 10px;
+    width: 118px;
+    height: 38px;
+    font-family: variables.$montserrat;
+    @include mixins.font-medium;
+    @include mixins.font-title;
+    text-align: center;
+    background-color: variables.$base-white;
+    border: 2px solid variables.$violet-lighter;
+    border-radius: 4px;
+  }
 }
 
+@media (min-width: variables.$min-tablet-width) {
+  .input {
+    &--price {
+      width: 92px;
+      height: 40px;
+    }
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .input {
+    &--price {
+      width: 135px;
+      height: 40px;
+    }
+  }
+}

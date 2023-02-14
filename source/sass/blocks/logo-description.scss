@@ -3,6 +3,6 @@
 
 .logo-description {
   @include mixins.font-regular;
-  @include mixins.font-body;
+  @include mixins.font-subtitle;
   color: variables.$base-black;
 }

@@ -19,6 +19,13 @@ img {
   vertical-align: top;
 }
 
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

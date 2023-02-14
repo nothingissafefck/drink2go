@@ -1,8 +1,22 @@
 @use "../global/variables";
 
+.map__container {
+  &--nojs .map__canvas--image {
+    display: block;
+  }
+
+  &--nojs .map__canvas--interactive {
+    display: none;
+  }
+}
+
 .map__canvas {
   width: 100%;
   height: 420px;
+
+  &--image {
+    display: none;
+  }
 }
 
 .map__image-map {
