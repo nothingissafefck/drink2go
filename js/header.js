@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelector(".header"),n=document.querySelector(".burger-menu");n.addEventListener("click",(function(){e.classList.toggle("header--menu-open"),n.classList.toggle("burger-menu--open")}))}));

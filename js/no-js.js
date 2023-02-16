@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll('[class*="nojs"]').forEach((e=>{e.classList.forEach((s=>{s.includes("nojs")&&e.classList.remove(s)}))}))}));
