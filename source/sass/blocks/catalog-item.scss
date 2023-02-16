@@ -73,7 +73,9 @@
     }
   }
 
-  .catalog-item__selected {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  .catalog-item {
+    &--selected {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
   }
 }
